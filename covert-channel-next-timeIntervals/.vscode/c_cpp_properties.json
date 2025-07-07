@@ -1,0 +1,20 @@
+{
+    "configurations": [
+      {
+        "name": "Linux",
+        "includePath": [
+          "${workspaceFolder}/src/**"
+        ],
+        "defines": [
+            "__AVX2__",
+            "__ARM_NEON"
+        ],
+        "compilerPath": "/usr/bin/clang",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "linux-clang-x64",
+        "configurationProvider": "ms-vscode.cmake-tools"
+      }
+    ],
+    "version": 4
+  }

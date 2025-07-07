@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (Debug)",
+      "command": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug && cmake --build build --parallel",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Build (Release)",
+      "command": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build --parallel",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": "build"
+    },
+    {
+      "label": "Clean",
+      "command": "rm -rf build",
+      "type": "shell",
+      "args": [],
+      "problemMatcher": [
+        "$tsc"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": "build"
+    }
+  ]
+}

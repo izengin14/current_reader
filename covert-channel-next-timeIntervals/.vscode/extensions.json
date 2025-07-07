@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools-extension-pack",
+    "editorconfig.editorconfig",
+    "ms-vscode.hexeditor"
+  ]
+}

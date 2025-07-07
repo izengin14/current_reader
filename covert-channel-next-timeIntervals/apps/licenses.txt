@@ -1,0 +1,5 @@
+SimpleMobileTools/Simple-Contacts is licensed under a GNU General Public License version 3.0
+
+WeatherForecastUSA is licensed under an MIT License
+
+As of 5/22/2023, these two apps are pushed without any changes to their internal or external functions.

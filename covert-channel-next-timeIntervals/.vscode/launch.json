@@ -1,0 +1,109 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Receiver Analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/experiments/receiver/analyze.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run receiver",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/receiver",
+      "args": [
+        "copy",
+        "0",
+        "32",
+        "64",
+        "104857600"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build (Debug)"
+    },
+    {
+      "name": "Run timing consistency",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/timing-consistency",
+      "args": [
+        "run-for",
+        "32",
+        "1000000000",
+        "copy",
+        "0",
+        "1073741824"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build (Debug)"
+    },
+    {
+      "name": "Run transmitter",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/transmitter",
+      "args": [
+        "copy",
+        "0",
+        "32",
+        "104857600",
+        "Hello, world"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build (Debug)"
+    }
+  ]
+}
